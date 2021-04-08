@@ -164,10 +164,10 @@ function load_details() {
   var pc = '';
   var vendor = '';
   var doc = '';
-  var sn = x.match('(?:sn=)(.*?)(?:;)')[1];
-  var hw = x.match('(?:hw=)(.*?)(?:;*)')[1];
-  var pid = x.match('(?:mn=)(.*?)(?:;)')[1];
-  var dm = x.match('(?:dm=)(.*?)(?:;)')[1];
+  var sn = x.match('(?:sn=)(.*?)(?:&)')[1];
+  var hw = x.match('(?:hw=)(.*?)(?:&*)')[1];
+  var pid = x.match('(?:mn=)(.*?)(?:&)')[1];
+  var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
 
   if (ir1100_pids.includes(pid)) {
     var family = 'CISCO 1100 Series';
@@ -183,19 +183,15 @@ function load_details() {
     var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
   }
    document.getElementById("doc").href = doc;
-       document.getElementById("pid").innerHTML = pid;
-  document.getElementById("df").innerHTML = family;
-  document.getElementById("vendor").innerHTML = vendor;
-  document.getElementById("sn").innerHTML = sn;
+   document.getElementById("pid").innerHTML = pid;
+   document.getElementById("df").innerHTML = family;
+   document.getElementById("vendor").innerHTML = vendor;
+   document.getElementById("sn").innerHTML = sn;
    document.getElementById("pc").href = pc;
-  document.getElementById("hw").innerHTML = hw;
-  document.getElementById("dm").innerHTML = dm;
-      document.getElementById("spec").href = spec;
-
-
+   document.getElementById("hw").innerHTML = hw;
+   document.getElementById("dm").innerHTML = dm;
+   document.getElementById("spec").href = spec;
 }
-
-
 
 </script>
 </body>
