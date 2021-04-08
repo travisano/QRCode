@@ -1,0 +1,202 @@
+<style type="text/css">
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .tg td {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      overflow: hidden;
+      padding: 5px 0px;
+      word-break: normal;
+    }
+
+    .tg th {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+      overflow: hidden;
+      padding: 5px 5px;
+      word-break: normal;
+    }
+
+    .tg .tg-w8hv {
+      background-color: #E2F2DB;
+      text-align: left;
+      vertical-align: middle
+    }
+
+    .tg .tg-9j11 {
+      background-color: #D9D9D9;
+      text-align: left;
+      vertical-align: middle
+    }
+
+    .tg .tg-bqyc {
+      background-color: #B0E7FF;
+      text-align: left;
+      vertical-align: middle
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      height: 100px;
+      border-radius: 12px;
+      vertical-align: top;
+    }
+
+    .button2 {
+      background-color: #0000A0;
+    }
+
+    .button3 {
+      background-color: #555555;
+    }
+    .button4 {
+      background-color: #FF4C4C;
+    }
+    h2 {
+      text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+      color: white;
+      font-size: 42px;
+      background-color: #00BCEB;
+      padding: 15px 32px;
+      border-radius: 12px;
+    }
+
+    div {
+      background-color: lightgray;
+      width: 530px;
+      padding: 25px;
+      border: 12px solid navy;
+
+    }
+
+</style>
+<html>
+<body onload="load_details()">
+
+<a href="https://www.cisco.com"><img src="https://1000logos.net/wp-content/uploads/2016/11/Cisco-logo.png" alt="HTML tutorial" style="width:200px;"></a>
+<br>
+<h1>Cisco QR Code Portal<br></h1>
+<!-- https://www.tablesgenerator.com/html_tables -->
+
+<table class="tg">
+    <thead>
+    <tr>
+        <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Field Name</span>&nbsp;&nbsp;&nbsp;</th>
+        <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Field ID</span>&nbsp;&nbsp;&nbsp;</th>
+        <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Information Sample</span>&nbsp;&nbsp;&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Device Family</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$DF</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="df" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Device MAC (Address)</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$DM</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Vendor</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$VN</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="vendor" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Serial Number</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$SN</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Model Name/No.</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$MN</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="pid" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">HW Rev (VID)</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$HW</span>&nbsp;&nbsp;&nbsp;</td>
+        <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="hw"  style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<div class="btn-group">
+    <center>
+        <h2>Digital Access Portal</h2>
+    </center>
+    <center><a id ="pc"  href="">
+        <button class="button"><b>Product HW Documents<br></b></button>
+    </a>
+        <a href="https://edelivery.cisco.com/esd/dcc">
+            <button class="button button2"><b>SW Licensing<br>Documents & Entitlements</b></button>
+        </a>
+        <br><br>
+                    <a id = 'doc' href="ir1101-k9.html">
+                <button  class="button button4"><b>Product Webpage</b></button>
+            </a>
+        <button class="button button3"><b>DNA Center Application<br></b></button>
+    </center>
+</div>
+
+<script>
+function load_details() {
+  var x = location.search;
+  var ir1100_pids = ['IR1101-K9'];
+  var c9200l_pids = ['C9200L-48P-4X-E']
+  var family = '';
+  var spec = '';
+  var pc = '';
+  var vendor = '';
+  var doc = '';
+  var sn = x.match('(?:sn=)(.*?)(?:;)')[1];
+  var hw = x.match('(?:hw=)(.*?)(?:;)')[1];
+  var pid = x.match('(?:mn=)(.*?)(?:;)')[1];
+  var dm = x.match('(?:dm=)(.*?)(?:;)')[1];
+
+  if (ir1100_pids.includes(pid)) {
+    var family = 'CISCO 1100 Series';
+    var spec = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.pdf';
+    var pc = '78-101332-02_A0.pdf';
+    var vendor = 'CISCO';
+    var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
+  } else if (c9200l_pids.includes(pid)) {
+    var family = 'CATALYST C9200L';
+    var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
+    var pc = '78-101287-01_A0.pdf';
+    var vendor = 'CISCO';
+    var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
+  }
+   document.getElementById("doc").href = doc;
+       document.getElementById("pid").innerHTML = pid;
+  document.getElementById("df").innerHTML = family;
+  document.getElementById("vendor").innerHTML = vendor;
+  document.getElementById("sn").innerHTML = sn;
+   document.getElementById("pc").href = pc;
+  document.getElementById("hw").innerHTML = hw;
+  document.getElementById("dm").innerHTML = dm;
+      document.getElementById("spec").href = spec;
+
+
+}
+
+
+
+</script>
+</body>
+</html>
