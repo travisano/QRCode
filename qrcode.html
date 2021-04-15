@@ -1,4 +1,17 @@
 <style type="text/css">
+  div {
+    background-color: lightgray;
+    width: 550px;
+    padding: 24px;
+    border: 10px solid navy;
+  }
+
+  body {
+    border: 1px solid transparent;
+    width: 100%;
+    padding-bottom: 1px;
+  }
+
   .tg {
     border-collapse: collapse;
     border-spacing: 0;
@@ -94,19 +107,7 @@
     border-radius: 12px;
   }
 
-  div {
-    background-color: lightgray;
-    width: 550px;
-    padding: 24px;
-    border: 10px solid navy;
-  }
 
-  body {
-    border: 1px solid transparent;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 0px;
-  }
   }
 
 </style>
@@ -127,34 +128,34 @@
       </thead>
       <tbody>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Device Family</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Device Family</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$DF</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="df" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="df" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Device MAC (Address)</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Device MAC (Address)</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$DM</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Vendor</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Vendor</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$VN</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="vendor" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="vendor" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Serial Number</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Serial Number</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$SN</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">Model Name/No.</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Model Name/No.</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$MN</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="pid" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="pid" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">HW Rev (VID)</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">HW Rev (VID)</span>&nbsp;&nbsp;&nbsp;</td>
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:normal;font-style:normal;color:black">.$HW</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="hw" style="font-weight:normal;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="hw" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
       </tbody>
     </table>
