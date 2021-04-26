@@ -177,7 +177,7 @@
         <a id='doc' href="">
           <button class="button button4"><b>Product Webpage</b></button>
         </a>
-        <a id="extras"><button class="button button3"><b>DNA Center Application<br></b></button></a>
+        <a id="extras"></a>
       </center>
     </div>
 
@@ -202,7 +202,7 @@
           var pc = '78-101332-02_A0.pdf';
           var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
-          var extras = '<button class="button button3"><b>DNA Center Application<br></b></button>';
+          var extras = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
         } else if (c9200l_pids.includes(pid)) {
           var family = 'CATALYST C9200L';
           var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
@@ -220,7 +220,7 @@
         document.getElementById("hw").innerHTML = hw;
         document.getElementById("dm").innerHTML = dm;
         document.getElementById("spec").href = spec;
-        document.getElementById("extras").appendChild(extras);
+        document.getElementById("extras").innerHTML = extras;
       }
 
     </script>
