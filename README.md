@@ -9,7 +9,7 @@ Cisco QR Portal Demo
 "c9200l" : {
 	       "family": "CATALYST C9200L",
 	       "spec": "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf",
-	       "pc" :"docs/78-101287-01_A0.pdf",
+	       "pc" :"78-101287-01_A0.pdf",
 	       "vendor" :"CISCO",
 	       "doc": "https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html",
 	       "extras" : ""
