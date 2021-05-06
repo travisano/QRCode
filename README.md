@@ -17,3 +17,9 @@ Cisco QR Portal Demo
 ```
 
 2. Put pointer card ("pc") document into docs/ folder.
+
+3. For any product-specific addons or specialties, feel free to add contents into "extras" field into your product profile in the form of HTML
+
+```json
+ "extra_buttons" : "<button class=\"button button3\"><b>DNA Center Application<br></b></button>"
+```
