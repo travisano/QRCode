@@ -58,7 +58,7 @@
     background-color: #D9D9D9;
     text-align: left;
     vertical-align: middle;
-    padding-left: 2px;
+        padding-left: 2px;
   }
 
   .tg .tg-bqyc {
@@ -74,12 +74,12 @@
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
-    font-size: 19px;
+    font-size: 18px;
     cursor: pointer;
-    height: 130px;
+    height: 100px;
     border-radius: 12px;
     vertical-align: top;
-    width: 200px
+    width: 300px
   }
 
   .button2 {
@@ -101,7 +101,7 @@
     width: 800px;
   }
 
-  h2 {
+ h2 {
     color: black;
     font-size: 52px;
     padding: 15px 32px;
@@ -116,7 +116,7 @@
 
   <body onload="load_details()">
 
-    <h1 href="https://www.cisco.com"><img src="Cisco-logo.png" style="width:200px;"></h1>
+    <h1 href="https://www.cisco.com"><img src="assets/Cisco-logo.png" style="width:200px;"></h1>
     <h1>Cisco QR Code Portal<br></h1>
     <!-- https://www.tablesgenerator.com/html_tables -->
     <table class="tg">
@@ -166,7 +166,7 @@
         <h2>Digital Access Portal</h2>
       </center>
       <center><a id="pc" href="">
-          <button class="button"><b>Product HW Documents<br></b></button>
+          <button class="button"><b>Compliance & Hardware<br>Documentation</b></button>
         </a>
         <a href="https://edelivery.cisco.com/esd/dcc">
           <button class="button button2"><b>SW Licensing<br>Documents & Entitlements</b></button>
@@ -176,7 +176,6 @@
           <button class="button button4"><b>Product Webpage</b></button>
         </a>
         <a id="extras"></a>
-        
       </center>
     </div>
 
@@ -194,22 +193,21 @@
         var hw = x.match('(?:hw=)(.*?)(?:&)')[1];
         var pid = x.match('(?:mn=)(.*?)(?:&)')[1];
         var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
-        var extras = '<button class="button button3"><b>DNA Center Application<br></b></button>';
 
         if (ir1100_pids.includes(pid)) {
           var family = 'CISCO 1100 Series';
           var spec = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.pdf';
-          var pc = '78-101332-02_A0.pdf';
+          var pc = 'docs/78-101332-02_A0.pdf';
           var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
-          var extra_buttons = '<button class="button button3"><b>DNA Center Application<br></b></button>';
+          var extras = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
         } else if (c9200l_pids.includes(pid)) {
           var family = 'CATALYST C9200L';
           var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
-          var pc = '78-101287-01_A0.pdf';
+          var pc = 'docs/78-101287-01_A0.pdf';
           var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
-          var extra_buttons = '<button class="button button3"><b>DNA Center Application<br></b></button>';
+          var extras = '';
         }
         document.getElementById("doc").href = doc;
         document.getElementById("pid").innerHTML = pid;
@@ -220,7 +218,7 @@
         document.getElementById("hw").innerHTML = hw;
         document.getElementById("dm").innerHTML = dm;
         document.getElementById("spec").href = spec;
-        document.getElementById("extras").insertAdjacentHTML('beforeend', extras);
+        document.getElementById("extras").innerHTML = extras;
       }
 
     </script>
