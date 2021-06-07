@@ -1,3 +1,4 @@
+
 <style type="text/css">
   div {
     background-color: lightgray;
@@ -116,47 +117,37 @@
 
   <body onload="load_details()">
 
-    <h1 href="https://www.cisco.com"><img src="assets/Cisco-logo.png" style="width:200px;"></h1>
+      <h1 href="https://www.cisco.com"><img src="Cisco-logo.png" style="width:200px;"></h1>
     <h1>Cisco QR Code Portal<br></h1>
     <!-- https://www.tablesgenerator.com/html_tables -->
     <table class="tg">
       <thead>
         <tr>
           <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Field Name</span>&nbsp;&nbsp;&nbsp;</th>
-          <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Field ID</span>&nbsp;&nbsp;&nbsp;</th>
+
           <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Information</span>&nbsp;&nbsp;&nbsp;</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Device Family</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$DF</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="df" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Device MAC (Address)</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$DM</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Vendor</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$VN</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="vendor" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Serial Number</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$SN</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Model Name/No.</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$MN</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Model Number (PID)</span>&nbsp;&nbsp;&nbsp;</td>
+
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="pid" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
         <tr>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">HW Rev (VID)</span>&nbsp;&nbsp;&nbsp;</td>
-          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">.$HW</span>&nbsp;&nbsp;&nbsp;</td>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Version ID (VID)</span>&nbsp;&nbsp;&nbsp;</td>
+
           <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="hw" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Serial Number (SN)</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">MAC Address</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
         </tr>
       </tbody>
     </table>
@@ -196,28 +187,28 @@
 
         if (ir1100_pids.includes(pid)) {
           var family = 'CISCO 1100 Series';
-          var spec = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.pdf';
+          //var spec = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.pdf';
           var pc = 'docs/78-101332-02_A0.pdf';
-          var vendor = 'CISCO';
+          //var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
           var extras = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
         } else if (c9200l_pids.includes(pid)) {
           var family = 'CATALYST C9200L';
-          var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
+          //var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
           var pc = 'docs/78-101287-01_A0.pdf';
-          var vendor = 'CISCO';
+          //var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
           var extras = '';
         }
         document.getElementById("doc").href = doc;
         document.getElementById("pid").innerHTML = pid;
-        document.getElementById("df").innerHTML = family;
-        document.getElementById("vendor").innerHTML = vendor;
+        // document.getElementById("df").innerHTML = family;
+        //document.getElementById("vendor").innerHTML = vendor;
         document.getElementById("sn").innerHTML = sn;
         document.getElementById("pc").href = pc;
         document.getElementById("hw").innerHTML = hw;
         document.getElementById("dm").innerHTML = dm;
-        document.getElementById("spec").href = spec;
+        //document.getElementById("spec").href = spec;
         document.getElementById("extras").innerHTML = extras;
       }
 
