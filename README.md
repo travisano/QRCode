@@ -3,7 +3,8 @@ Cisco QR Portal Demo
 
 *Adding A Product to the QR Portal*
 
-1. Add your PID keywords to BU_or_PID_families mapping which will map your BU or PID families to a "product profile" .  Product profile will contain links and pointer card destinations
+1. Add your PID keywords to BU_or_PID_families mapping in  qrcode.json configuration file,
+   This will map your BU or PID families to a "product profile" ->  Product profile will contain links and pointer card destinations
 
 ```
 json
