@@ -24,13 +24,13 @@ Cisco QR Portal Demo
 		   },
 ```
 
-2. Put associated pointer card ("pc") document into portal's docs/ folder.
+3. Put associated pointer card ("pc") document into portal's docs/ folder.
 
 ```
 docs/78-101287-01_A0.pdf
 ```
 
-3. (OPTIONAL) For any product-specific addons or specialties, feel free to add contents into "extras" field into your product profile in the form of HTML.  
+4. (OPTIONAL) For any product-specific addons or specialties, feel free to add contents into "extras" field into your product profile in the form of HTML.  
 
 ```json
  "extra_buttons" : "<button class=\"button button3\"><b>DNA Center Application<br></b></button>"
