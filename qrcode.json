@@ -1,13 +1,20 @@
+
 {
-	"ir1101" : { 
+        "BU_or_PID_families": {
+            "UABU": ["C9200*", "C9300*", "C9400*"],
+            "IR1100" : ["IR1101-K9*"]
+
+            },
+
+	"IR1100" : {
                  "pc" : "78-101332-02_A0.pdf",
                  "doc" : "https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html",
                  "extra_buttons" : "<button class=\"button button3\"><b>DNA Center Application<br></b></button>"
 		   },
 
-	"c9200l" : {
+	"UABU" : {
                "pc" :"78-101287-01_A0.pdf",
-               "doc": "https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html",
-               "extras" : ""
+               "doc": "https://www.cisco.com/c/en/us/products/switches/",
+               "extra_buttons" : ""
 		   }
 }
