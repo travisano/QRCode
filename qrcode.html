@@ -156,17 +156,17 @@
       <center>
         <h2>Digital Access Portal</h2>
       </center>
-      <center><a id="pc" href="">
+      <center><a id="pc" href="" target="_blank">
           <button class="button"><b>Compliance & Hardware<br>Documentation</b></button>
         </a>
-        <a href="https://edelivery.cisco.com/esd/dcc">
+        <a href="https://edelivery.cisco.com/esd/dcc" target="_blank">
           <button class="button button2"><b>SW Licensing<br>Documents & Entitlements</b></button>
         </a>
         <br><br>
-        <a id='doc' href="">
+        <a id='doc' href="" target="_blank">
           <button class="button button4"><b>Product Webpage</b></button>
         </a>
-        <a id="extras"></a>
+        <a id="extra_buttons"></a>
       </center>
     </div>
 
@@ -186,19 +186,13 @@
         var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
 
         if (ir1100_pids.includes(pid)) {
-          var family = 'CISCO 1100 Series';
-          //var spec = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.pdf';
           var pc = 'docs/78-101332-02_A0.pdf';
-          //var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
-          var extras = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
+          var extra_buttons = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
         } else if (c9200l_pids.includes(pid)) {
-          var family = 'CATALYST C9200L';
-          //var spec = 'https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9200-series-switches/nb-06-cat9200-ser-data-sheet-cte-en.pdf';
           var pc = 'docs/78-101287-01_A0.pdf';
-          //var vendor = 'CISCO';
           var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
-          var extras = '';
+          var extra_buttons = '';
         }
         document.getElementById("doc").href = doc;
         document.getElementById("pid").innerHTML = pid;
@@ -209,7 +203,7 @@
         document.getElementById("hw").innerHTML = hw;
         document.getElementById("dm").innerHTML = dm;
         //document.getElementById("spec").href = spec;
-        document.getElementById("extras").innerHTML = extras;
+        document.getElementById("extra_buttons").innerHTML = extra_buttons;
       }
 
     </script>
