@@ -6,8 +6,7 @@ Cisco QR Portal Demo
 1. Add your PID keywords to BU_or_PID_families mapping in  qrcode.json configuration file,
    This will map your BU or PID families to a "product profile" ->  Product profile will contain links and pointer card destinations
 
-```
-json
+```json
     "BU_or_PID_families": {
             "UABU": ["C9200*", "C9300*", "C9400*"],
             "IR1100" : ["IR1101-K9*"]
