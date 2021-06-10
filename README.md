@@ -8,7 +8,7 @@ Cisco QR Portal Demo
 
 ```json
     "BU_or_PID_families": {
-            "UABU": ["C9200*", "C9300*", "C9400*"],
+            "UABU": ["C9200*", "C9300*", "C94*"],
             "IR1100" : ["IR1101-K9*"]
             },
 
