@@ -1,0 +1,208 @@
+<style type="text/css">
+  div {
+    background-color: #F2F2F2;
+    width: 550px;
+    padding: 24px;
+    border: 10px solid navy;
+  }
+
+  body {
+    border: 1px solid transparent;
+    width: 100%;
+    padding-bottom: 1px;
+    padding-left: 65px;
+  }
+
+  .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 800px;
+  }
+
+  .btn-group {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 742px;
+    border-width: 5px;
+    border-color: 1e447;
+  }
+
+  .tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+    padding: 5px 0px;
+    word-break: normal;
+  }
+
+  .tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 5px 5px;
+    word-break: normal;
+  }
+
+  .tg .tg-w8hv {
+    background-color: #33c9ef;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .tg .tg-9j11 {
+    background-color: #33c9ef;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 2px;
+  }
+
+  .tg .tg-bqyc {
+    background-color: #F2F2F2;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 2px;
+  }
+
+  .button {
+    background-color: #33c9ef;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    height: 80px;
+    border-radius: 100px;
+    vertical-align: top;
+    width: 300px
+  }
+
+  h1 {
+    text-align: center;
+    vertical-align: middle;
+    width: 800px;
+  }
+
+  h2 {
+    color: black;
+    font-size: 36px;
+    padding: 0px 0px;
+    border-radius: 10px;
+  }
+
+
+  }
+
+</style>
+<html>
+
+  <body onload="load_details()">
+
+    <h1 href="https://www.cisco.com"><img src="assets/Cisco-logo.png" style="width:200px;"></h1>
+    <h1>Digital Documentation Portal<br></h1>
+    <!-- https://www.tablesgenerator.com/html_tables -->
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Field Description</span>&nbsp;&nbsp;&nbsp;</th>
+
+          <th class="tg-9j11">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Attributes</span>&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Product ID (PID)</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="pid" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Version ID (VID)</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="hw" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Serial Number (SN)</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="sn" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">MAC Address</span>&nbsp;&nbsp;&nbsp;</td>
+
+          <td class="tg-bqyc">&nbsp;&nbsp;&nbsp;<br><span id="dm" style="font-weight:bold;font-style:normal;color:black"></span>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <div class="btn-group">
+      <center>
+        <b id='doc' href="" target="_blank">
+          <button class="button"><b>Product Information</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </b>
+        <b id="hi" href="" target="_blank">
+          <button class="button"><b>Hardware Install Guides</b></button>
+        </b>
+
+        <br><br> <br>
+
+        <b id="pc" href="" target="_blank">
+          <button class="button"><b>Compliance Documentation</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </b>
+        <b href="https://edelivery.cisco.com/esd/dcc" target="_blank">
+          <button class="button"><b>Software Licensing</b></button>
+        </b>
+        <br>
+        <b id="extra_buttons"></b>
+      </center>
+    </div>
+
+    <script>
+      function load_details() {
+        var x = location.search;
+        var ir1100_pids = ['IR1101-K9'];
+        var c9200l_pids = ['C9200L-48P-4X-E']
+        var family = '';
+        var spec = '';
+        var pc = '';
+        var vendor = '';
+        var doc = '';
+        var hi = '';
+        var sn = x.match('(?:sn=)(.*?)(?:&)')[1];
+        var hw = x.match('(?:hw=)(.*?)(?:&)')[1];
+        var pid = x.match('(?:mn=)(.*?)(?:&)')[1];
+        var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
+
+        if (ir1100_pids.includes(pid)) {
+          var pc = 'docs/78-101332-02_A0.pdf';
+          var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
+          var extra_buttons = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
+          var hi = 'https://www.cisco.com/c/en/us/td/docs/routers/access/1101/b_IR1101HIG.html';
+        } else if (c9200l_pids.includes(pid)) {
+          var pc = 'https://www.cisco.com/c/dam/en/us/td/docs/switches/lan/catalyst9200/hardware/regulatory/RCSI-0376-book.pdf';
+          var doc = 'https://www.cisco.com/c/en/us/products/switches/catalyst-9200-series-switches/index.html';
+          var extra_buttons = '';
+          var hi = 'https://www.cisco.com/c/en/us/support/switches/catalyst-9200-r-series-switches/products-installation-guides-list.html';
+        }
+        document.getElementById("doc").href = doc;
+        document.getElementById("pid").innerHTML = pid;
+        // document.getElementById("df").innerHTML = family;
+        //document.getElementById("vendor").innerHTML = vendor;
+        document.getElementById("sn").innerHTML = sn;
+        document.getElementById("pc").href = pc;
+        document.getElementById("hw").innerHTML = hw;
+        document.getElementById("dm").innerHTML = dm;
+        document.getElementById("hi").href = hi;
+        //document.getElementById("spec").href = spec;
+        document.getElementById("extra_buttons").innerHTML = extra_buttons;
+      }
+
+    </script>
+  </body>
+
+</html>
