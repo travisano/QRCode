@@ -1,4 +1,5 @@
 <style type="text/css">
+body {background-color: #4d4c4c;}
   div {
     background-color: #F2F2F2;
     width: 550px;
@@ -27,6 +28,7 @@ a {
     width: 742px;
     border-width: 5px;
     border-color: 1e447;
+    color: #4d4c4c;
   }
 
   .tg td {
@@ -63,14 +65,16 @@ a {
     text-align: middle;
     vertical-align: middle;
     padding-left: 2px;
+
   }
 
   .tg .tg-bqyc {
-    background-color: #F2F2F2;
+    background-color: #4d4c4c;
     text-align: left;
     vertical-align: middle;
     padding-left: 2px;
     width: 400px;
+    color: white;
   }
 
   .button {
@@ -95,10 +99,11 @@ a {
     text-align: center;
     vertical-align: middle;
     width: 800px;
+    color: white;
   }
 
   h2 {
-    color: black;
+     color: white;
     font-size: 36px;
     padding: 0px 0px;
     border-radius: 10px;
@@ -118,7 +123,7 @@ a {
     <table class="tg">
       <thead>
         <tr>
-          <th class="tg-9j11" colspan="2">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Attributes</span>&nbsp;&nbsp;&nbsp;</th>
+          <th class="tg-9j11" colspan="2">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;font-style:normal;color:black">Product Attributes</span>&nbsp;&nbsp;&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -162,7 +167,6 @@ a {
         <a href="https://edelivery.cisco.com/esd/dcc" target="_blank">
           <button class="button"><b>Software Licensing</b></button>
         </a>
-        <br><br>
         <a id="extra_buttons"></a>
       </center>
     </div>
@@ -186,7 +190,7 @@ a {
         if (ir1100_pids.includes(pid)) {
           var pc = 'docs/78-101332-02_A0.pdf';
           var doc = 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html';
-          var extra_buttons = '<a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
+          var extra_buttons = '<br><br><a href="https://edelivery.cisco.com/esd/dcc"> <button class="button button3"><b>DNA Center Application</b></button> </a>';
           var hi = 'https://www.cisco.com/c/en/us/td/docs/routers/access/1101/b_IR1101HIG.html';
         } else if (c9200l_pids.includes(pid)) {
           var pc = 'https://www.cisco.com/c/dam/en/us/td/docs/switches/lan/catalyst9200/hardware/regulatory/RCSI-0376-book.pdf';
