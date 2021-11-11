@@ -189,9 +189,9 @@
         var doc = '';
         var hi = '';
         var sn = x.match('(?:sn=)(.*?)(?:&)')[1];
-        var hw = x.match('(?:hw=)(.*?)(?:&)')[1];
+        var hw = x.match('(?:hw=|vi)(.*?)(?:&)')[1];
         var pid = x.match('(?:mn=|pi=)(.*?)(?:&)')[1];
-        var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
+        var dm = x.match('(?:dm=|ma=)(.*?)(?:&)')[1];
 
         if (ir1100_pids.includes(pid)) {
           var pc = 'docs/78-101332-02_A0.pdf';
