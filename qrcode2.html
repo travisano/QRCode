@@ -182,7 +182,7 @@ a {
         var vendor = '';
         var doc = '';
         var hi = '';
-        var sn = x.match('(?:sn=)(.*?)(?:&)')[1];
+        var sn = x.match('(?:sn=|SN=)(.*?)(?:&)')[1];
         var hw = x.match('(?:hw=|vi=|HW=|VI=)(.*?)(?:&)')[1];
         var pid = x.match('(?:mn=|pi=|MN=|PI=)(.*?)(?:&)')[1];
         var dm = x.match('(?:dm=|ma=|DM=)|MA=(.*?)(?:&)')[1];
