@@ -184,7 +184,7 @@ a {
         var hi = '';
         var sn = x.match('(?:sn=)(.*?)(?:&)')[1];
         var hw = x.match('(?:hw=)(.*?)(?:&)')[1];
-        var pid = x.match('(?:mn=)(.*?)(?:&)')[1];
+        var pid = x.match('(?:mn=|pi=)(.*?)(?:&)')[1];
         var dm = x.match('(?:dm=)(.*?)(?:&)')[1];
 
         if (ir1100_pids.includes(pid)) {
